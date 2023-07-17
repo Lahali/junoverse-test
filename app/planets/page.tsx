@@ -35,7 +35,7 @@ const Planets = () => {
 
   useEffect(() => {
     if (endOfData) {
-      router.push("/404")
+      router.push("/not-found")
       return
     }
 
@@ -49,7 +49,7 @@ const Planets = () => {
       })
       .catch((error) => {
         console.log(error)
-        router.push("/404")
+        router.push("/not-found")
       })
     router.push(`/planets?page=${page}`)
   }, [endOfData, page, router, setEndOfData, setLoading])

@@ -35,7 +35,7 @@ export default function Starships() {
 
   useEffect(() => {
     if (endOfData) {
-      router.push("/404")
+      router.push("/not-found")
       return
     }
 
@@ -49,7 +49,7 @@ export default function Starships() {
       })
       .catch((error) => {
         console.log(error)
-        router.push("/404")
+        router.push("/not-found")
       })
     router.push(`/starships?page=${page}`)
   }, [endOfData, page, router])
@@ -58,7 +58,7 @@ export default function Starships() {
     action === "increase" ? setPage(page + 1) : setPage(page - 1)
     if (page < 1) return
     if (!starships) {
-      router.push("/404")
+      router.push("/not-found")
     }
   }
 

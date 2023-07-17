@@ -35,7 +35,7 @@ const Species = () => {
 
   useEffect(() => {
     if (endOfData) {
-      router.push("/404")
+      router.push("/not-found")
       return
     }
 
@@ -49,7 +49,7 @@ const Species = () => {
       })
       .catch((error) => {
         console.log(error)
-        router.push("/404")
+        router.push("/not-found")
       })
     router.push(`/species?page=${page}`)
   }, [endOfData, page, router])
@@ -58,7 +58,7 @@ const Species = () => {
     action === "increase" ? setPage(page + 1) : setPage(page - 1)
     if (page < 1) return
     if (!species) {
-      router.push("/404")
+      router.push("/not-found")
     }
   }
 

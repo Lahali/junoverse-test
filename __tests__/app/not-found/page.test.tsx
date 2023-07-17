@@ -1,6 +1,6 @@
 import React from "react"
 import { fireEvent, render, screen } from "@testing-library/react"
-import NotFound from "../../../app/404/page"
+import NotFound from "../../../app/not-found/page"
 
 describe("Not found page", () => {
   it("Should render properly", () => {

@@ -35,7 +35,7 @@ const People = () => {
 
   useEffect(() => {
     if (endOfData) {
-      router.push("/404")
+      router.push("/not-found")
       return
     }
 
@@ -50,7 +50,7 @@ const People = () => {
       })
       .catch((error) => {
         console.log(error)
-        router.push("/404")
+        router.push("/not-found")
       })
     router.push(`/people?page=${page}`)
   }, [endOfData, page, router, setEndOfData, setLoading])
@@ -59,7 +59,7 @@ const People = () => {
     action === "increase" ? setPage(page + 1) : setPage(page - 1)
     if (page < 1) return
     if (!people) {
-      router.push("/404")
+      router.push("/not-found")
       return
     }
   }

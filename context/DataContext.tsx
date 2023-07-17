@@ -192,7 +192,7 @@ export const SwapiDataProvider = ({
       .catch((error) => {
         setError(true)
         console.log(error)
-        router.push("/404")
+        router.push("/not-found")
       })
   }, [endOfData, page, router])
 
