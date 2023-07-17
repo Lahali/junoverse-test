@@ -1,0 +1,20 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  color: #ffe300;
+  height: 100vh;
+}
+
+.main a {
+  color: black;
+  background-color: #ffe300;
+  padding: 1rem;
+  border-radius: 0.25rem;
+}
+
+.main p {
+  margin: 1rem;
+}
