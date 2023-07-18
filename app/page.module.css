@@ -57,6 +57,12 @@
   padding-bottom: 1rem;
   border-radius: 0.25rem;
   background-color: #ffe300;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #a89504;
+  color: black;
 }
 
 .hidden {
